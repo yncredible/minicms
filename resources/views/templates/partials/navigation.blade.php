@@ -19,8 +19,8 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Add</a></li>
 				<li><a href="#">Log out</a></li>
-				<li><a href="#">Sign up</a></li>
-				<li><a href="#">Log in</a></li>
+				<li><a href="{{ route('auth.signup') }}">Sign up</a></li>
+				<li><a href="">Log in</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>
