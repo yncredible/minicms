@@ -4,7 +4,13 @@
 <div class="col-lg-6 col-lg-offset-3">
 	<form class="form-vertical" action="{{ route('auth.signup') }}" method="POST" role="form">
 		<legend>Sign up</legend>
-	
+
+		<div class="form-group{{ $errors->has('secret') ? ' has-error' : '' }}">
+			<input type="text" class="form-control" name="secret" id="secret" placeholder="Secret Code" value="{{ Request::old('secret') ?: '' }}">
+			@if ($errors->has('secret'))
+				<span class="help-block">{{ $errors->first('secret') }}</span>
+			@endif
+		</div>
 		<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 			<input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{ Request::old('email') ?: '' }}">
 			@if ($errors->has('email'))

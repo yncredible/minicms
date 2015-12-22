@@ -15,6 +15,7 @@ class AuthController extends Controller
 	public function postSignup(Request $request)
 	{
 		$this->validate($request, [
+			'secret' => 'required|in:weareimd',
 			'email' => 'required|unique:users|email|max:255',
 			'username' => 'required|unique:users|alpha_dash|max:40',
 			'password' => 'required|min:4',
