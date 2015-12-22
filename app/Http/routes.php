@@ -1,6 +1,6 @@
 <?php
 /**
- * HOME
+ * Home
  */
 Route::get('/', [
 	'uses' => 'HomeController@index',
@@ -16,4 +16,10 @@ Route::get('/signup', [
 Route::post('/signup', [
 	'uses' => 'AuthController@postSignup',
 ]);
-
+Route::get('/signin', [
+	'uses' => 'AuthController@getSignin',
+	'as' => 'auth.signin',
+]);
+Route::post('/signup', [
+	'uses' => 'AuthController@postSignin',
+]);

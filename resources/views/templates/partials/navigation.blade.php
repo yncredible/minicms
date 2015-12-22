@@ -20,7 +20,7 @@
 				<li><a href="#">Add</a></li>
 				<li><a href="#">Log out</a></li>
 				<li><a href="{{ route('auth.signup') }}">Sign up</a></li>
-				<li><a href="">Log in</a></li>
+				<li><a href="{{ route('auth.signin') }}">Sign in</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>
