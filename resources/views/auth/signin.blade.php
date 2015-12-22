@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
 <div class="col-lg-6 col-lg-offset-3">
-	<form class="form-vertical" action="{{ route('auth.signup') }}" method="POST" role="form">
+	<form class="form-vertical" action="{{ route('auth.signin') }}" method="POST" role="form">
 		<legend>Sign in</legend>
 
 		<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -23,7 +23,7 @@
 			</label>
 		</div>
 		<div class="form-group">
-			<button type="submit" class="btn btn-default">Sign up</button>
+			<button type="submit" class="btn btn-default">Sign in</button>
 		</div>
 		<input type="hidden" name="_token" value="{{ Session::token() }}">
 	</form>
