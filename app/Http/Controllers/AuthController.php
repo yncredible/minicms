@@ -15,10 +15,10 @@ class AuthController extends Controller
 	{
 		$this->validate($request, [
 			'email' => 'required|unique:users|email|max:255',
-			'email' => 'required|unique:users|alpha_dash|max:40',
+			'username' => 'required|unique:users|alpha_dash|max:40',
 			'password' => 'required|min:4',
 		]);
-		
+
 		dd('all ok');
 	}
 }

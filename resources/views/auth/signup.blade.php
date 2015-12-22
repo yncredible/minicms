@@ -6,14 +6,22 @@
 		<legend>Sign up</legend>
 	
 		<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-			<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+			<input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{ Request::old('email') ?: '' }}">
+			@if ($errors->has('email'))
+				<span class="help-block">{{ $errors->first('email') }}</span>
+			@endif
 		</div>
-		<div class="form-group">
-			<input type="text" class="form-control" name="username" id="username" placeholder="Username">
+		<div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+			<input type="text" class="form-control" name="username" id="username" placeholder="Username" value="{{ Request::old('username') ?: '' }}">
+			@if ($errors->has('username'))
+				<span class="help-block">{{ $errors->first('username') }}</span>
+			@endif
 		</div>
-		<div class="form-group">
+		<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 			<input type="password" class="form-control" name="password" id="password" placeholder="Password">
-		</div>
+			@if ($errors->has('password'))
+				<span class="help-block">{{ $errors->first('password') }}</span>
+			@endif		</div>
 		<div class="form-group">
 			<button type="submit" class="btn btn-default">Sign up</button>
 		</div>
