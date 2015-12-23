@@ -22,11 +22,25 @@
 					<div class="gridBody">{{ $content->content_title }}</div>
 				</article>
 	
+			@elseif ($content->type == "soundcloud.com")
+					
+				<article class="media gridItem">
+					<div class="gridVid"></div>
+					<div class="gridBody">{{ $content->content_title }}</div>
+				</article>
+
+			@else
+					
+				<article class="media gridItem">
+					<div class="gridVid"></div>
+					<div class="gridBody">{{ $content->content_title }}</div>
+				</article>
+	
 			@endif
 		@endforeach
 	@else
 
-		<p>Nothing available yet.</p>
+		<p>Nothing content available yet.</p>
 
 	@endif
 

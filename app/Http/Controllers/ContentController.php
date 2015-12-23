@@ -69,7 +69,7 @@ class ContentController extends Controller
 		/**
 		 * VIMEO
 		 */
-		
+
 		else if ($type == "vimeo.com")
 		{
 			if(preg_match("/vimeo.com\/[1-9.-_]+/", $getUrl)) {
@@ -104,9 +104,15 @@ class ContentController extends Controller
 		 * SOUNDCLOUD
 		 */
 
+		else if ($type == "soundcloud.com")
+		{
+			$video_id = '';
+			$video_title = 'SoundCloud';
+		}
 		else
 		{
-			dd('something else');
+			$video_id = '';
+			$video_title = 'Other';
 		}
 
 		/**
