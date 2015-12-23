@@ -10,7 +10,9 @@
 					<iframe class="gridVid"
 							src="{{ $content->url }}">
 					</iframe>
-					<div class="gridBody">{{ $content->content_title }}</div>
+					<div class="gridBody">
+						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+					</div>
 				</article>
 
 			@elseif ($content->type == "vimeo.com")
@@ -19,21 +21,27 @@
 					<iframe class="gridVid"
 						src="{{ $content->url }}">
 					</iframe>
-					<div class="gridBody">{{ $content->content_title }}</div>
+					<div class="gridBody">
+						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+					</div>
 				</article>
 	
 			@elseif ($content->type == "soundcloud.com")
 					
 				<article class="media gridItem">
 					<div class="gridVid"></div>
-					<div class="gridBody">{{ $content->content_title }}</div>
+					<div class="gridBody">
+						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+					</div>
 				</article>
 
 			@else
 					
 				<article class="media gridItem">
 					<div class="gridVid"></div>
-					<div class="gridBody">{{ $content->content_title }}</div>
+					<div class="gridBody">
+						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+					</div>
 				</article>
 	
 			@endif

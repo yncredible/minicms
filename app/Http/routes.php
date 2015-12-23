@@ -48,6 +48,10 @@ Route::get('/', [
 	'uses' => 'ContentController@showContent',
 	'as' => 'home',
 ]);
+Route::get('/content/{id}', [
+	'uses' => 'ContentController@showDetail',
+	'as' => 'content.show',
+]);
 
 
 

@@ -142,4 +142,10 @@ class ContentController extends Controller
 
 		return view('home')->with('contents', $contents);
 	}
+
+	public function showDetail($id)
+	{
+		$contents = Content::where('id', $id)->get();
+		return view('content.show')->with('contents', $contents);
+	}
 }
