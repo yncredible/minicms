@@ -1,0 +1,19 @@
+.gridItem{
+	width:275px;
+	margin:5px;
+	float:left;
+}
+
+.gridVid{
+	width:280px;
+	height:170px;
+	border:0;
+	background:#333;
+}
+
+.gridBody{
+	height:70px;
+	background:#f2f2f2;
+	margin-top:-5px;
+	padding:10px;
+}

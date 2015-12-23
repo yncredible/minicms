@@ -102,7 +102,7 @@ class ContentController extends Controller
 
 	public function showContent()
 	{
-		$contents = Content::all();
+		$contents = Content::orderBy('created_at', 'desc')->get();
 
 		return view('home')->with('contents', $contents);
 	}
