@@ -12,6 +12,8 @@ class Content extends Model
         'url', 
         'user_id', 
         'type',
+        'content_id',
+        'content_title',
     ];
 
     protected $hidden = ['password', 'remember_token'];
