@@ -31,3 +31,16 @@ Route::get('/signout', [
 	'uses' => 'AuthController@getSignout',
 	'as' => 'auth.signout',
 ]);
+/**
+ * Content
+ */
+Route::get('/content/add', [
+	'uses' => 'ContentController@getAddContent',
+	'as' => 'content.add',
+	'middleware' => ['auth'],
+]);
+
+
+
+
+
