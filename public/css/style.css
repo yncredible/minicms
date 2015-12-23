@@ -17,3 +17,9 @@
 	margin-top:-5px;
 	padding:10px;
 }
+
+.emptystate{
+	border:1px solid #f2f2f2;
+	color:#AAA;
+	padding:30px;
+}

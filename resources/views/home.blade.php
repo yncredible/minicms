@@ -39,8 +39,13 @@
 			@endif
 		@endforeach
 	@else
-
-		<p>Nothing content available yet.</p>
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 emptystate text-center">
+				<h1>Alas :(</h1>
+				<h2>No content available yet.</h2>
+				<a href="{{ Route('content.add') }}" class="btn btn-primary">ADD CONTENT</a>
+			</div>
+		</div>
 
 	@endif
 
