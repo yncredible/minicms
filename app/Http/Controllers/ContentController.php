@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Auth;
 use App\User;
 use App\Content;
@@ -32,5 +33,14 @@ class ContentController extends Controller
 		return redirect()
 			->route('home')
 			->with('info', 'Content successfully added.');
+	}
+
+	public function showContent()
+	{
+		$contents = DB::table('contents')
+			->orderBy('created_at', 'desc')
+			->get();
+
+		return view('home')->with('contents', $contents);
 	}
 }

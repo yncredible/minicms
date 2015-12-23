@@ -44,6 +44,9 @@ Route::post('/content/add', [
 	'as' => 'content.add',
 	'middleware' => ['auth'],
 ]);
+Route::get('/', [
+	'uses' => 'ContentController@showContent',
+]);
 
 
 
