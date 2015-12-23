@@ -46,6 +46,7 @@ Route::post('/content/add', [
 ]);
 Route::get('/', [
 	'uses' => 'ContentController@showContent',
+	'as' => 'home',
 ]);
 
 
