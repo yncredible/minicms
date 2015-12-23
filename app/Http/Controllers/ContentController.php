@@ -34,7 +34,11 @@ class ContentController extends Controller
 		$type = preg_replace('/^www\./', '', $urlParts['host']);
 
 		/**
-		 * Parse url
+		 * Parse urls
+		 */
+
+		/**
+		 * YOUTUBE
 		 */
 
 		if ($type == "youtube.com")
@@ -55,11 +59,17 @@ class ContentController extends Controller
 	        		$getUrl = 'http://www.youtube.com/embed/'.$matches[1];
 	    		}
 			}
+			// using the YouTube API
 			$video_id = $matches[1];
 			$data = file_get_contents("https://www.googleapis.com/youtube/v3/videos?id=" . $video_id . "&key=" . $ytkey . "&part=snippet,contentDetails,statistics,status");
 			$result = json_decode($data, true);
 			$video_title = $result['items'][0]['snippet']['title'];
 		}
+
+		/**
+		 * VIMEO
+		 */
+		
 		else if ($type == "vimeo.com")
 		{
 			if(preg_match("/vimeo.com\/[1-9.-_]+/", $getUrl)) {
@@ -71,9 +81,29 @@ class ContentController extends Controller
         			$getUrl = 'http://player.vimeo.com/video/'.$matches[1];
     			}
 			}
+			// using the Vimeo API
+			$oembed_endpoint = 'http://vimeo.com/api/oembed';
+			$video_url = $request->input('url');
+			$xml_url = $oembed_endpoint . '.xml?url=' . rawurlencode($video_url) . '&width=640';
+			// Curl helper function
+			function curl_get($url) {
+			    $curl = curl_init($url);
+			    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			    curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+			    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+			    $return = curl_exec($curl);
+			    curl_close($curl);
+			    return $return;
+			}
+			$oembed = simplexml_load_string(curl_get($xml_url));
 			$video_id = $matches[1];
-			$video_title = 'Unknown';
+			$video_title = $oembed->title;
 		}
+
+		/**
+		 * SOUNDCLOUD
+		 */
+
 		else
 		{
 			dd('something else');
