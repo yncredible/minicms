@@ -20,7 +20,7 @@
 			@if (Auth::check())
 				<li class="navbar-brand">Hi, {{ Auth::user()->username }}</li>
 				<li><a href="#">Add</a></li>
-				<li><a href="#">Log out</a></li>
+				<li><a href="{{ route('auth.signout') }}">Sign out</a></li>
 			@else
 				<li><a href="{{ route('auth.signup') }}">Sign up</a></li>
 				<li><a href="{{ route('auth.signin') }}">Sign in</a></li>
