@@ -5,15 +5,22 @@
 			@foreach ($contents as $content)
 				@if ($content->type == "youtube.com")
 
-				<article class="media">
-					<h3>{{ $content->content_title }}</h3>
-					<iframe style="width:500px;border:0;min-height:300px;"
-							src="{{ $content->url }}">
-					</iframe>
-				</article>
+					<article class="media">
+						<h3>{{ $content->content_title }}</h3>
+						<iframe style="width:500px;border:0;min-height:281px;"
+								src="{{ $content->url }}">
+						</iframe>
+					</article>
 
 				@elseif ($content->type == "vimeo.com")
-					<p>VIMEO: {{ $content->url }} | {{ $content->type }}</p>
+						
+					<article class="media">
+						<h3>{{ $content->content_title }}</h3>
+						<iframe style="width:500px;border:0;min-height:281px;"
+							src="{{ $content->url }}">
+						</iframe>
+					</article>
+		
 				@endif
 			@endforeach
 	@else

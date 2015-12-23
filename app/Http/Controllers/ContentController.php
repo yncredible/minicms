@@ -62,7 +62,17 @@ class ContentController extends Controller
 		}
 		else if ($type == "vimeo.com")
 		{
-			dd('vimeo');
+			if(preg_match("/vimeo.com\/[1-9.-_]+/", $getUrl)) {
+    			
+    			preg_match("/vimeo.com\/([1-9.-_]+)/", $getUrl, $matches);
+    		
+    			if(isset($matches[1])) {
+
+        			$getUrl = 'http://player.vimeo.com/video/'.$matches[1];
+    			}
+			}
+			$video_id = $matches[1];
+			$video_title = 'Unknown';
 		}
 		else
 		{
