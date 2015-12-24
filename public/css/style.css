@@ -2,13 +2,26 @@
 	width:275px;
 	margin:5px;
 	float:left;
+	padding:0;
+}
+
+.media .gridBody{
+	margin-top:-5px;
 }
 
 .gridVid{
-	width:280px;
+	width:275px;
 	height:170px;
 	border:0;
 	background:#333;
+}
+
+img.imgLg{
+	width:auto;
+	max-width: 100%;
+	height:auto;
+	background:#f2f2f2;
+	padding:20px;
 }
 
 .gridItem.website img{
@@ -20,7 +33,6 @@
 .gridBody{
 	height:70px;
 	background:#f2f2f2;
-	margin-top:-5px;
 	padding:10px;
 }
 

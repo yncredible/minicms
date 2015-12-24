@@ -28,7 +28,7 @@
 	
 			@elseif ($content->type == "soundcloud.com")
 					
-				<article class="media gridItem">
+				<article class="gridItem">
 					<div class="gridVid"></div>
 					<div class="gridBody">
 						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
@@ -37,7 +37,7 @@
 
 			@else
 					
-				<article class="media gridItem website">
+				<article class="gridItem website">
 					<div class="gridVid">
 						<img src="{{ $content->url }}" alt="">
 					</div>
