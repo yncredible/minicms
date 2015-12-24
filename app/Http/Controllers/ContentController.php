@@ -164,8 +164,15 @@ class ContentController extends Controller
 		->orderBy('comments.created_at', 'desc')
 		->get();
 
+		$count = DB::table('comments')
+		->where('content_id', $currentid)
+		->select('id', 'username', 'comment')
+		->orderBy('comments.created_at', 'desc')
+		->count();
+
 		return view('content.show')
 		->with('contents', $contents)
-		->with('comments', $comments);
+		->with('comments', $comments)
+		->with('count', $count);
 	}
 }

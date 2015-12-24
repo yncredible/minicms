@@ -71,6 +71,7 @@ img.imgLg{
 	border:1px solid #f2f2f2;
 	color:#AAA;
 	padding:30px;
+	margin-bottom:40px;
 }
 
 .emptystate h1{
@@ -126,6 +127,40 @@ img.imgLg{
 
 .form-control{
 	border-radius: 0;
+}
+
+.commentItem{
+	margin:20px 0;
+}
+.avatar{
+	width:50px;
+	height:50px;
+	background:#16a085;
+	outline:1px solid #f2f2f2;
+	outline-offset:5px;
+	margin-right:20px;
+}
+
+.avatar span{
+	color:#fff;
+}
+
+.commentBody{
+	padding:5px 10px;
+	outline:1px solid #f2f2f2;
+	outline-offset:5px;
+	width:75%;
+}
+.commentBody h5{
+	font-size:12px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+}
+.commentBody p{
+	margin:0;
+	padding:3px 0;
+	font-size:14px;
 }
 
 

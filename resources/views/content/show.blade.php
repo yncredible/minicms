@@ -20,7 +20,7 @@
 				<div class="commentForm">
 					<form action="{{ route('comment.add') }}" method="POST" class="form-inline" role="form">				
 						<div class="form-group{{ $errors->has('comment') ? ' has-error' : '' }}">
-							<input style="width:400px" type="text" class="form-control" name="comment" id="comment" placeholder="Comment" value="{{ Request::old('comment') ?: '' }}">
+							<input style="max-width:100%;width:400px;" type="text" class="form-control" name="comment" id="comment" placeholder="Comment" value="{{ Request::old('comment') ?: '' }}">
 							@if ($errors->has('comment'))
 								<span class="help-block">{{ $errors->first('comment') }}</span>
 							@endif
@@ -33,11 +33,17 @@
 			</div>
 			<div class="col-lg-4">
 				<h3>{{ $content->content_title }}</h3>
+				<small>scraped from {{ $content->type }}</small>
 				<hr>
 				@if ($comments)
+					<h4>{{ $count }} comments</h4>
 					@foreach ($comments as $comment)
-						<div class="commentItem">
-							{{ $comment->username }}: {{ $comment->comment }}
+						<div class="commentItem clearfix">
+							<div class="avatar pull-left"></div>
+							<div class="commentBody pull-left">
+								<h5>{{ $comment->username }} said:</h5>
+								<p>{{ $comment->comment }}</p>
+							</div>
 						</div>
 					@endforeach
 				@else
