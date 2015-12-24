@@ -111,21 +111,11 @@ class ContentController extends Controller
 		}
 		else
 		{
-			$html = file_get_contents($getUrl);
-			$dom = new \DOMDocument();
-			libxml_use_internal_errors(true);
-			$dom->loadHTML($html);
-			libxml_use_internal_errors(false);
-			$dom->preserveWhiteSpace = false;
-			$imgTags = $dom->getElementsByTagName('img');
-			if ($imgTags->length > 0) {
-			    $imgElement = $imgTags->item(0);
-			    $imgpath = $imgElement->getAttribute('src');
-			} else {
-			    $imgpath = 'http://www.androidtapp.com/wp-content/themes/AndroidTappv5/img/No-Image-Found.jpg';
-			}
+			include_once('../public/templates/simple_html_dom.php');
+			$html = file_get_html($getUrl);
+			$element = $html->find('img');
 
-			$getUrl = $imgpath;
+			$getUrl = $element[0]->src;
 			$video_id = '';
 			$video_title = $type;
 		}
