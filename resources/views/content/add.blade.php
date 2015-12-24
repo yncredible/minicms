@@ -15,6 +15,18 @@
 
 		<input type="hidden" name="_token" value="{{ Session::token() }}">
 	</form>
+	<hr>
+	<div class="instructions emptystate">
+		<h1>Helper</h1>
+		<h3>I. Youtube</h3>
+		<p>Copy a YouTube URL <span class="help-block">Example: https://www.youtube.com/watch?v=jRt-wkzr5Kg</span></p>
+		<h3>II. Vimeo</h3>
+		<p>Copy a Vimeo URL <span class="help-block">Example: https://vimeo.com/18047390</span></p>
+		<h3>III. SoundCloud</h3>
+		<p>Copy a SoundCloud URL <span class="help-block">Example: https://soundcloud.com/50_cent/im-the-man-ft-sonny-digital</span></p>
+		<h3>IIII. Random</h3>
+		<p>Copy a random URL, fetch first <code>img</code> <span class="help-block">Example: http://gruntjs.com/</span></p>
+	</div>
 </div>
 </div>
 @stop
