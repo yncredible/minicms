@@ -33,7 +33,7 @@
 						<img src="{{ $content->url }}" alt="">
 					</div>
 					<div class="gridBody">
-						<p class="gridTitle">{{ $content->content_title }} (not finished)</p>
+						<p class="gridTitle"><a href="#">{{ $content->content_title }} (not finished)</a></p>
 					</div>
 				</article>
 
@@ -41,7 +41,9 @@
 					
 				<article class="gridItem website">
 					<div class="gridVid">
-						<img src="{{ $content->url }}" alt="">
+						<a href="{{ route('content.show', ['id' => $content->id]) }}">
+							<img src="{{ $content->url }}" alt="">
+						</a>
 					</div>
 					<div class="gridBody">
 						<p class="gridTitle"><a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a></p>
@@ -55,6 +57,7 @@
 			<div class="col-lg-8 col-lg-offset-2 emptystate text-center">
 				<h1>Alas :(</h1>
 				<h2>No content available yet.</h2>
+				<small class="clearfix">So buddy, why don't you add some content now?</small>
 				<a href="{{ Route('content.add') }}" class="btn btn-default btnSeeMe">ADD CONTENT</a>
 			</div>
 		</div>

@@ -14,7 +14,7 @@ body{
 	display:block;
 	margin:0 auto;
 	object-fit:cover;
-	width:auto;
+	width:275px;
 	height:100%;
 	max-width: 275px;
 	max-height:170px;
@@ -25,7 +25,7 @@ body{
 }
 
 .media .gridBody{
-	margin-top:-5px;
+	margin-top:-6px;
 }
 
 .gridVid{
@@ -45,26 +45,40 @@ img.imgLg{
 }
 
 .gridBody{
-	height:70px;
 	background:#f2f2f2;
-	padding:10px;
 	text-align: center;
+	border-bottom: 5px solid #1abc9c;
 }
 
 .gridTitle{
 	font-weight: bold;
 	margin:0;
-	line-height: 50px;
 }
 
 .gridTitle a{
 	color:#333;
+	display: block;
+	padding:10px;
+	min-height: 65px;
+}
+
+.gridTitle a:hover{
+	background:#16a085;
+	color:#fff;
 }
 
 .emptystate{
 	border:1px solid #f2f2f2;
 	color:#AAA;
 	padding:30px;
+}
+
+.emptystate h1{
+	color:#1abc9c;
+}
+
+.emptystate a.btnSeeMe{
+	margin:30px 0;
 }
 
 .gridVidLg{

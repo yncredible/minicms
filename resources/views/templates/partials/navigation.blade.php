@@ -22,8 +22,8 @@
 				<li><a class="btnSeeMe" href="{{ route('content.add') }}">Add Content</a></li>
 				<li><a href="{{ route('auth.signout') }}"><small>Sign out</small></a></li>
 			@else
-				<li><a href="{{ route('auth.signup') }}">Sign up</a></li>
-				<li><a href="{{ route('auth.signin') }}">Sign in</a></li>
+				<li><a class="btnSeeMe" href="{{ route('auth.signup') }}">Sign up</a></li>
+				<li><a href="{{ route('auth.signin') }}"><small>Sign in</small></a></li>
 			@endif
 			</ul>
 		</div><!-- /.navbar-collapse -->
