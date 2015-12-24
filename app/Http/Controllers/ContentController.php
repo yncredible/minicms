@@ -156,6 +156,16 @@ class ContentController extends Controller
 	public function showDetail($id)
 	{
 		$contents = Content::where('id', $id)->get();
-		return view('content.show')->with('contents', $contents);
+		$currentid = Content::find($id)->id;
+
+		$comments = DB::table('comments')
+		->where('content_id', $currentid)
+		->select('id', 'username', 'comment')
+		->orderBy('comments.created_at', 'desc')
+		->get();
+
+		return view('content.show')
+		->with('contents', $contents)
+		->with('comments', $comments);
 	}
 }

@@ -38,7 +38,5 @@ class CommentController extends Controller
 		return redirect()
 			->back()
 			->with('info', 'Comment successfully added.');
-
-
 	}
 }

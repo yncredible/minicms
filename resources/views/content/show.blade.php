@@ -34,6 +34,19 @@
 			<div class="col-lg-4">
 				<h3>{{ $content->content_title }}</h3>
 				<hr>
+				@if ($comments)
+					@foreach ($comments as $comment)
+						<div class="commentItem">
+							{{ $comment->username }}: {{ $comment->comment }}
+						</div>
+					@endforeach
+				@else
+					<div class="commentItem emptystate text-center">
+						<h1>Alas :(</h1>
+						<h4>No comments available yet.</h4>
+						<small class="clearfix">Why don't you write the first comment?</small>
+					</div>
+				@endif
 			</div>
 		</div>
 
