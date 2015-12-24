@@ -5,13 +5,13 @@
 	<form action="{{ route('content.add') }}" method="POST" class="form-inline" role="form">
 		<legend> Add content </legend>
 		<div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
-			<input type="text" class="form-control" id="url" name="url" placeholder="URL">
+			<input style="width:400px" type="text" class="form-control" id="url" name="url" placeholder="URL">
 			@if ($errors->has('url'))
 				<span class="help-block">{{ $errors->first('url') }}</span>
 			@endif		
 		</div>
 	
-		<button type="submit" class="btn btn-default">Add</button>
+		<button type="submit" class="btn btn-default btnSeeMe">Add Content</button>
 
 		<input type="hidden" name="_token" value="{{ Session::token() }}">
 	</form>

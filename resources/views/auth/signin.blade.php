@@ -23,7 +23,7 @@
 			</label>
 		</div>
 		<div class="form-group">
-			<button type="submit" class="btn btn-default">Sign in</button>
+			<button type="submit" class="btn btn-default btnSeeMe">Sign in</button>
 		</div>
 		<input type="hidden" name="_token" value="{{ Session::token() }}">
 	</form>

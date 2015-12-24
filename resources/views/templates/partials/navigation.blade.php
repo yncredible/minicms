@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="container">
 		<div class="navbar-header">
@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">SCRAP3R</a>
+			<a class="navbar-brand" href="/">SCRAP<span class="colorMe">3</span>R</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,8 +19,8 @@
 			<ul class="nav navbar-nav navbar-right">
 			@if (Auth::check())
 				<li class="navbar-brand">Hi, {{ Auth::user()->username }}</li>
-				<li><a href="{{ route('content.add') }}">Add</a></li>
-				<li><a href="{{ route('auth.signout') }}">Sign out</a></li>
+				<li><a class="btnSeeMe" href="{{ route('content.add') }}">Add Content</a></li>
+				<li><a href="{{ route('auth.signout') }}"><small>Sign out</small></a></li>
 			@else
 				<li><a href="{{ route('auth.signup') }}">Sign up</a></li>
 				<li><a href="{{ route('auth.signin') }}">Sign in</a></li>

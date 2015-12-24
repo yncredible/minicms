@@ -73,3 +73,46 @@ img.imgLg{
 	max-height:400px;
 	border:0;
 }
+
+.navbar-inverse{
+	border-radius: 0;
+}
+.navbar-inverse .navbar-brand{
+	color:#fff;
+	font-weight: bold;
+}
+.alert-scraper{
+	background:#1abc9c;
+	color:#fff;
+	border-radius: 0;
+	padding:25px;
+}
+
+.colorMe{
+	color:#1abc9c;
+}
+
+.btnSeeMe{
+	background:#1abc9c;
+	color:#fff;
+	border-radius: 0;
+	border:0;
+}
+.btnSeeMe:hover{
+	background:#16a085;
+	color:#fff;
+}
+.navbar-inverse .navbar-nav>li>a.btnSeeMe{
+	background:#1abc9c;
+	color:#fff;
+}
+.navbar-inverse .navbar-nav>li>a.btnSeeMe:hover{
+	background:#16a085;
+}
+
+.form-control{
+	border-radius: 0;
+}
+
+
+

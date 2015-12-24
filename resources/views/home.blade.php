@@ -1,6 +1,6 @@
 @extends('templates.app')
 @section('content')
-	<h1>SCRAP3D CONTENT</h1>
+	<h1>SCRAP<span class="colorMe">3</span>D CONTENT</h1>
 	<hr>
 	@if ($contents->count())
 		@foreach ($contents as $content)
@@ -55,7 +55,7 @@
 			<div class="col-lg-8 col-lg-offset-2 emptystate text-center">
 				<h1>Alas :(</h1>
 				<h2>No content available yet.</h2>
-				<a href="{{ Route('content.add') }}" class="btn btn-primary">ADD CONTENT</a>
+				<a href="{{ Route('content.add') }}" class="btn btn-default btnSeeMe">ADD CONTENT</a>
 			</div>
 		</div>
 

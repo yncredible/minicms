@@ -6,7 +6,7 @@
 		<legend>Sign up</legend>
 
 		<div class="form-group{{ $errors->has('secret') ? ' has-error' : '' }}">
-			<input type="text" class="form-control" name="secret" id="secret" placeholder="Secret Code" value="{{ Request::old('secret') ?: '' }}">
+			<input type="text" class="form-control" name="secret" id="secret" placeholder="Secret Code (weareimd)" value="{{ Request::old('secret') ?: '' }}">
 			@if ($errors->has('secret'))
 				<span class="help-block">{{ $errors->first('secret') }}</span>
 			@endif
@@ -30,7 +30,7 @@
 			@endif		
 		</div>
 		<div class="form-group">
-			<button type="submit" class="btn btn-default">Sign up</button>
+			<button type="submit" class="btn btn-default btnSeeMe">Sign up</button>
 		</div>
 		<input type="hidden" name="_token" value="{{ Session::token() }}">
 	</form>
