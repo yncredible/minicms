@@ -106,6 +106,7 @@ class ContentController extends Controller
 
 		else if ($type == "soundcloud.com")
 		{
+			$getUrl = "http://nexed.be/wp-content/uploads/2014/05/SoundCloud.jpg";
 			$video_id = '';
 			$video_title = 'SoundCloud';
 		}
@@ -124,7 +125,6 @@ class ContentController extends Controller
 				$getUrl;
 			}
 
-			$getUrl;
 			$video_id = '';
 			$video_title = $type;
 		}

@@ -28,10 +28,12 @@
 	
 			@elseif ($content->type == "soundcloud.com")
 					
-				<article class="gridItem">
-					<div class="gridVid"></div>
+				<article class="gridItem website">
+					<div class="gridVid">
+						<img src="{{ $content->url }}" alt="">
+					</div>
 					<div class="gridBody">
-						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+						{{ $content->content_title }} (not finished)
 					</div>
 				</article>
 
