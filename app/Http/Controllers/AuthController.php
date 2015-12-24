@@ -29,8 +29,8 @@ class AuthController extends Controller
 		]);
 
 		return redirect()
-			->route('home')
-			->with('info', 'Your account has been created.');
+			->route('auth.signin')
+			->with('info', 'Your account has been created. You can now sign in!');
 	}
 
 	public function getSignin()
