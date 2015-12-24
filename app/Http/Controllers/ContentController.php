@@ -111,8 +111,23 @@ class ContentController extends Controller
 		}
 		else
 		{
+			$html = file_get_contents($getUrl);
+			$dom = new \DOMDocument();
+			libxml_use_internal_errors(true);
+			$dom->loadHTML($html);
+			libxml_use_internal_errors(false);
+			$dom->preserveWhiteSpace = false;
+			$imgTags = $dom->getElementsByTagName('img');
+			if ($imgTags->length > 0) {
+			    $imgElement = $imgTags->item(0);
+			    $imgpath = $imgElement->getAttribute('src');
+			} else {
+			    $imgpath = 'http://www.androidtapp.com/wp-content/themes/AndroidTappv5/img/No-Image-Found.jpg';
+			}
+
+			$getUrl = $imgpath;
 			$video_id = '';
-			$video_title = 'Other';
+			$video_title = $type;
 		}
 
 		/**

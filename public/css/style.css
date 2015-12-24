@@ -11,6 +11,11 @@
 	background:#333;
 }
 
+.gridItem.website img{
+	height:170px;
+	object-fit:cover;
+}
+
 .gridBody{
 	height:70px;
 	background:#f2f2f2;

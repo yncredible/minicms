@@ -37,8 +37,10 @@
 
 			@else
 					
-				<article class="media gridItem">
-					<div class="gridVid"></div>
+				<article class="media gridItem website">
+					<div class="gridVid">
+						<img src="http://{{ $content->type}}/{{ $content->url }}" alt="">
+					</div>
 					<div class="gridBody">
 						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
 					</div>
