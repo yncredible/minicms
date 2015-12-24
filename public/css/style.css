@@ -14,6 +14,7 @@
 .gridItem.website img{
 	height:170px;
 	object-fit:cover;
+	width:275px;
 }
 
 .gridBody{
