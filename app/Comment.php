@@ -4,15 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Content extends Model
+class Comment extends Model
 {
-    protected $table = 'contents';
+    protected $table = 'comments';
 
     protected $fillable = [
-        'url', 
         'user_id', 
-        'type',
-        'content_title',
+        'username', 
+        'content_id',
+        'comment',
     ];
 
     protected $hidden = ['password', 'remember_token'];

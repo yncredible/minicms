@@ -19,11 +19,15 @@
 				<hr>
 				<div class="commentForm">
 					<form action="{{ route('comment.add') }}" method="POST" class="form-inline" role="form">				
-						<div class="form-group">
-							<input style="width:400px" type="text" class="form-control" name="comment" id="comment" placeholder="Comment">
+						<div class="form-group{{ $errors->has('comment') ? ' has-error' : '' }}">
+							<input style="width:400px" type="text" class="form-control" name="comment" id="comment" placeholder="Comment" value="{{ Request::old('comment') ?: '' }}">
+							@if ($errors->has('comment'))
+								<span class="help-block">{{ $errors->first('comment') }}</span>
+							@endif
 						</div>					
 						<button type="submit" class="btn btn-default btnSeeMe">Add Comment</button>
 						<input type="hidden" name="_token" value="{{ Session::token() }}">
+						<input type="hidden" name="content_id" value="{{ $content->id }}">
 					</form>
 				</div>
 			</div>
