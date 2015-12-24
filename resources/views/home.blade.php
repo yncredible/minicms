@@ -11,7 +11,7 @@
 							src="{{ $content->url }}">
 					</iframe>
 					<div class="gridBody">
-						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+						<p class="gridTitle"><a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a></p>
 					</div>
 				</article>
 
@@ -22,7 +22,7 @@
 						src="{{ $content->url }}">
 					</iframe>
 					<div class="gridBody">
-						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+						<p class="gridTitle"><a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a></p>
 					</div>
 				</article>
 	
@@ -33,7 +33,7 @@
 						<img src="{{ $content->url }}" alt="">
 					</div>
 					<div class="gridBody">
-						{{ $content->content_title }} (not finished)
+						<p class="gridTitle">{{ $content->content_title }} (not finished)</p>
 					</div>
 				</article>
 
@@ -44,7 +44,7 @@
 						<img src="{{ $content->url }}" alt="">
 					</div>
 					<div class="gridBody">
-						<a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a>
+						<p class="gridTitle"><a href="{{ route('content.show', ['id' => $content->id]) }}">{{ $content->content_title }}</a></p>
 					</div>
 				</article>
 	
