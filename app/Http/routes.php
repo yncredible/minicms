@@ -52,7 +52,13 @@ Route::get('/content/{id}', [
 	'uses' => 'ContentController@showDetail',
 	'as' => 'content.show',
 ]);
-
+/**
+ * Comments
+ */
+Route::post('/content/comment', [
+	'uses' => 'CommentController@postComment',
+	'as' => 'comment.add',
+]);
 
 
 
