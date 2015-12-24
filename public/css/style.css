@@ -3,6 +3,21 @@
 	margin:5px;
 	float:left;
 	padding:0;
+	overflow: hidden;
+}
+
+.gridItem.website img{
+	display:block;
+	margin:0 auto;
+	object-fit:cover;
+	width:auto;
+	height:100%;
+	max-width: 275px;
+	max-height:170px;
+}
+
+.gridItem.website .gridVid{
+	background:#f2f2f2;
 }
 
 .media .gridBody{
@@ -14,6 +29,7 @@
 	height:170px;
 	border:0;
 	background:#333;
+	overflow: hidden;
 }
 
 img.imgLg{
@@ -22,12 +38,6 @@ img.imgLg{
 	height:auto;
 	background:#f2f2f2;
 	padding:20px;
-}
-
-.gridItem.website img{
-	height:170px;
-	object-fit:cover;
-	width:275px;
 }
 
 .gridBody{
