@@ -17,7 +17,6 @@ class CreateContentsTable extends Migration
             $table->integer('user_id');
             $table->string('type');
             $table->string('url');
-            $table->string('content_id')->nullable();
             $table->string('content_title')->nullable();
             $table->timestamps();
         });

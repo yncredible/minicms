@@ -96,7 +96,6 @@ class ContentController extends Controller
 			    return $return;
 			}
 			$oembed = simplexml_load_string(curl_get($xml_url));
-			$video_id = $matches[1];
 			$video_title = $oembed->title;
 		}
 
@@ -107,7 +106,6 @@ class ContentController extends Controller
 		else if ($type == "soundcloud.com")
 		{
 			$getUrl = "http://nexed.be/wp-content/uploads/2014/05/SoundCloud.jpg";
-			$video_id = '';
 			$video_title = 'SoundCloud';
 		}
 		else
@@ -125,7 +123,6 @@ class ContentController extends Controller
 				$getUrl;
 			}
 
-			$video_id = '';
 			$video_title = $type;
 		}
 
@@ -141,7 +138,6 @@ class ContentController extends Controller
 			'url' => $getUrl,
 			'user_id' => $userid,
 			'type' => $type,
-			'content_id' => $video_id,
 			'content_title' => $video_title,
 		]);
 
