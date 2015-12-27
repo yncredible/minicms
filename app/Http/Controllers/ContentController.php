@@ -34,13 +34,9 @@ class ContentController extends Controller
 		$type = preg_replace('/^www\./', '', $urlParts['host']);
 
 		/**
-		 * Parse urls
-		 */
-
-		/**
 		 * YOUTUBE
 		 */
-
+		
 		if ($type == "youtube.com")
 		{
 			if(preg_match("/youtu.be\/[a-z1-9.-_]+/", $getUrl)) {
@@ -118,7 +114,7 @@ class ContentController extends Controller
 			// always making the path absolute
 			$getUrl = trim($getUrl, '/');
 			if (!preg_match('#^http(s)?://#', $getUrl)) {
-	    		$getUrl = 'http://www.' . $type . '/' . $getUrl;
+	    		$getUrl = 'http://' . $type . '/' . $getUrl;
 			} else {
 				$getUrl;
 			}

@@ -25,7 +25,7 @@
 		<h3>III. SoundCloud</h3>
 		<p>Copy a SoundCloud URL <span class="help-block">Example: https://soundcloud.com/50_cent/im-the-man-ft-sonny-digital</span></p>
 		<h3>IIII. Random</h3>
-		<p>Copy a random URL, fetch first <code>img</code> <span class="help-block">Example: http://gruntjs.com/</span></p>
+		<p>Copy a random URL, fetch first <code>img</code> <span class="help-block">Example: http://yannicknijs.be/</span></p>
 	</div>
 </div>
 </div>
