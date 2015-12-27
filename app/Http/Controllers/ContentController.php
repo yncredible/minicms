@@ -106,18 +106,18 @@ class ContentController extends Controller
 		}
 		else
 		{
-			include_once('../public/templates/simple_html_dom.php');
-			$html = file_get_html($getUrl);
-			$element = $html->find('img');
-			$getUrl = $element[0]->src;
+			// include_once('../public/templates/simple_html_dom.php');
+			// $html = file_get_html($getUrl);
+			// $element = $html->find('img');
+			// $getUrl = $element[0]->src;
 
-			// always making the path absolute
-			$getUrl = trim($getUrl, '/');
-			if (!preg_match('#^http(s)?://#', $getUrl)) {
-	    		$getUrl = 'http://' . $type . '/' . $getUrl;
-			} else {
-				$getUrl;
-			}
+			// // always making the path absolute
+			// $getUrl = trim($getUrl, '/');
+			// if (!preg_match('#^http(s)?://#', $getUrl)) {
+	  //   		$getUrl = 'http://' . $type . '/' . $getUrl;
+			// } else {
+			// 	$getUrl;
+			// }
 
 			$video_title = $type;
 		}
